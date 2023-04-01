@@ -5,6 +5,7 @@ board = [['', '', ''],
 
 
 def printBoard():
+    #The method prints the board out
     print("X 0,1,2")
     print('Y')
     i = 0
@@ -14,6 +15,7 @@ def printBoard():
 
 
 def checkWin():
+    #Method checks if there is a winner and returns true or false and the player that has won
     for i in range(3):
         if board[i][0] == board[i][1] == board[i][2] and board[i][0] != '':
             return True, board[i][0]
@@ -27,7 +29,8 @@ def checkWin():
     return False, ''
 
 
-def main():
+def gameLoop():
+    #The main game will be play in this
     xPlayer = True
     coordinateList = ['0', '1', '2']
     while True:
@@ -65,6 +68,10 @@ def main():
                 print('You must enter X,Y')
         else:
             print('You have not enetered anything')
+
+def main():
+    #Could add a menu here ? 
+    gameLoop()
 
 
 main()
