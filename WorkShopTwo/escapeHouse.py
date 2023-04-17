@@ -10,6 +10,7 @@ def isPresent(data):
         print('*************')
         print('You have not written anything')
         print('**************')
+        print()
         return False
 
 def office():
@@ -19,6 +20,7 @@ def office():
         print('Where do you want to look?')
         print('Options: Shelves/Desk/Bookcase/Leave')
         choice = input()
+        print()
         if isPresent(choice):
             if choice.upper() in ['SHELVES','DESK','BOOKCASE','LEAVE']:
                 break
@@ -26,12 +28,14 @@ def office():
         print('You walk up to the shelves')
         print("You walk over to you dads office shelves, there isn't a lot of there apart from family photos and no real sign of a front door key")
         print('With that you walk over to the middle of the office again')
+        print()
         office()
     elif choice[0].capitalize() =='D':
         print('You walk up to you dads desk')
         print("You sit down at your dads old desk, on the left side is a shopping list that says you're out of custard creams, on the right side is a photo of you and you sister jess")
         print('There is nothing else on his desk apart from his pencils, pens a paper tray and a desk light')
         print('You stand up and go back to the center of his office')
+        print()
         office()
     elif choice[0].capitalize() =='B':
         print('You walk up to the boockase')
@@ -48,6 +52,7 @@ def office():
         else:
             print("It doesn't look like you have the code, you know your parents were forgetful so they had to have left a note somewhere")
             print('So you get up from the bookcase and move back into the middle of the room ')
+            print()
             office()           
     else:
         hall()
@@ -56,27 +61,33 @@ def office():
 def diningTable():
     if 'Safe Code' in inventory:
         print('You already have the safe code, you do not need to look at your passowrd anymore')
+        print()
     else:
         attempts = 0
         print('You pull one of the chairs out and site down at the table')
         print('At the center of the tabe, is your mums laptop, you open the lid and are met with a password box')
+        print()
         while True:
             print('Please enter your password:') 
             password = input()
             if password == 'Rose':
                 print('You are logged into your mums computer, you look through the different files that are open')
                 print('You find an email across your computer that says he has changed the password to the safe, you write this down on paper and put it in your pocket')
+                print()
                 inventory.append('Safe Code')
                 print('You shut the laptop and get up from the table')
+                print()
                 break
             else:
                 attempts += 1
 
             if attempts == 2:
                 print('Here is a hint, it is 4 letters long')
+                print()
             elif attempts == 3 or attempts == 5:
                 while True:
                     print('You are locked from trying another password until you pass this math question:')
+                    print()
                     #create question
                     numOne = random.randint(0,10)
                     numTwo = random.randint(0,10)
@@ -87,12 +98,15 @@ def diningTable():
                             break
                         else:
                             print('Your answer is incorrect, try another question')
+                            print()
             elif attempts == 6:
                 print('Here is another hint, it is my favourte flower')
+                print()
             elif attempts == 8:
                 print('You have had too many attempts please try again later')
                 print('You get up from the table and stand in the middle of the desk')
                 print('You wait a few moments pass while you stand in the centre of the room')
+                print()
                 break
     diningRoom()
 
@@ -114,9 +128,11 @@ def diningRoom():
                 print('*************')
                 print('Please write one of the options given to you')
                 print('**************')
+                print()
     if choice[0].capitalize() == 'W':
         print('You walk up to the window and peer through, to your old front garden. The rose bush you mum loved, fron and center. But something about it seemed off')
         print('You step away and return to the middle of the room')
+        print()
         diningRoom()
     elif choice[0].capitalize() == 'L':
         hall()
@@ -138,9 +154,11 @@ def kitchen():
                 print('*************')
                 print('Please write one of the options given to you')
                 print('**************')
+                print()
     if choice[0].capitalize() == 'L':
         print('You open the fridge and see nothing but milk')
         print('You shut the fridge and go back to the middle of the kitchen')
+        print()
         kitchen()
     elif choice[0].capitalize() =='R':
         print('You go to the cupbards')
@@ -159,19 +177,23 @@ def kitchen():
                 print('You pick it up and realise it is the key for the front door')
                 print('You get up and go back to the middle of the kitchen')
                 inventory.append('key')
+                print()
                 kitchen()
             else:
                 print('You go to look for biscuits but there is nothing in the cupbard')
                 print('You get up and go back to the middle of the kitchen')
+                print()
                 kitchen()
         elif snackChoice[0].capitalize() == 'A':
             print('You look in the fruit bowl, there is an apple inside, you pick it up and put it in your pocket')
             inventory.append('apple')
             print('You get up and go back to the middle of the kitchen')
+            print()
             kitchen()
         else:
             print('You look in the draw where the chocolate usually is but there is none')
             print('You get up and go back to the middle of the kitchen')
+            print()
             kitchen()
         
     else:
@@ -196,14 +218,17 @@ def hall():
                 print('*************')
                 print('Please write one of the options given to you')
                 print('**************')
+                print()
                 
     if direction[0].capitalize() == 'F':
         print('You walk into your dads old office')
+        print()
         office()
                     
     #Backwards
     elif direction[0].capitalize() == 'B':
         print('You walk into your old family dining room')
+        print()
         diningRoom()
                     
     #Left
@@ -211,17 +236,21 @@ def hall():
         if 'key' in inventory:
             print('You pull the key out your bag, slot it in the door and push on the handle to escape the house')
             print('You left the house with:')
+            print()
             for i in inventory:
                 print(i)
             print('You then feel the light hit you face, as you realise the whole sthing was a dream')
+            print()
 
 
         else:
             print('You go up to the door and try to turn the handle, you need a key!')
             print('Dad used to keep a key in his office')
+            print()
             hall()
     else:
         print("You walk into the kitchen")
+        print()
         kitchen()
 
  
@@ -244,22 +273,27 @@ def main():
                 print('*************')
                 print('Please write one of the options given to you')
                 print('**************')
+                print()
     #Forwards
     if direction[0].capitalize() == 'F':
         print('You walk into your dads old office')
+        print()
         office()
         #Backwards
     elif direction[0].capitalize() == 'B':
         print('You walk into the old dining room')
+        print()
         diningRoom()
     #Left
     elif direction[0].capitalize() == 'L':
         print('You go up to the door and try to turn the handle, you need a key!')
         print('Dad used to keep a key in his office')
+        print()
         hall()
     #Right
     else: 
         print('You walk into the kitchen')
+        print()
         kitchen()
         
 main()
