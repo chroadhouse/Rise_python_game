@@ -1,14 +1,5 @@
-# Now you know about the different data types
-# Try storing the appropriate type for each variable 
-# Once you have completed the code, why not run it and see what happens ? 
+# Before we start to learn anything about python, we need to make sure that you have the proper environement
+# Run this code and see if what happens
 
-
-name = 
-
-age = 
-
-# Something for double 
-
-# Something for Boolean
-
-print(f'Hello my name is {name} and I am {age} years old. ')
+print('Hello World!')
+print('Welcome the Text Adventure with Python course!')

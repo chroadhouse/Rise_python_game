@@ -1,5 +1,4 @@
 # If statements 
-
 # We are going to build a menu for our new naughts and crosses game
 
 while True:
