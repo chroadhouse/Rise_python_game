@@ -15,4 +15,5 @@ percy_file = {'Animal Type':'Dog',
 
 # Now try make your own animal file using a dictionary
 
+my_list = [1,2,3,4]
 

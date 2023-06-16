@@ -1,7 +1,6 @@
 import random
 inventory = []
 
-# think about having a time variable
 
 def isPresent(data):
     if data != '':
@@ -112,7 +111,6 @@ def diningTable():
 
                 
              
-        
 
 def diningRoom():
     choice = ''
