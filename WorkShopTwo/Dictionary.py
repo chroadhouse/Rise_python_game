@@ -6,14 +6,15 @@ my_dict = {}
 # We can use dictionaries when we want to store data 
 # Below is an example for an animal
 
-percy_file = {'Animal Type':'Dog',
+dog_file = {'Animal Type':'Dog',
               'Name':'Percy',
               'Breed':'Dashound',
               'Age':10,
               'Sex':'M'
               }
 
+name = dog_file['Name']
+
 # Now try make your own animal file using a dictionary
 
-my_list = [1,2,3,4]
 
